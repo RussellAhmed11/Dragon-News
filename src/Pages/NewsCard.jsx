@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 const NewsCard = ({ news }) => {
 
@@ -46,9 +47,9 @@ const NewsCard = ({ news }) => {
             </figure>
             <div className="px-4 py-3 text-sm text-gray-600">
                 <p className="line-clamp-3">{news.details}</p>
-                <p className="text-orange-500 font-semibold mt-1 cursor-pointer">
+                <Link to={`/news/${news._id}`} className="text-orange-500 font-semibold mt-1 cursor-pointer">
                     Read More
-                </p>
+                </Link>
             </div>
             <div className="flex justify-between items-center px-4 py-2 border-t text-sm text-gray-700">
                 <div className="flex items-center gap-1 text-orange-500">
